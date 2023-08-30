@@ -18,8 +18,8 @@ public class ProgramProductCosumer {
         list.add(new Product("Tablet", 450.00));
         list.add(new Product("Teclado", 69.00));
 
-        list.forEach(Product::staticProductConsumer);
-        
+        list.forEach(Product::nonStaticProductConsumer);
+
         list.forEach(System.out::println);
     }
 }
