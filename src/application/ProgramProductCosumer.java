@@ -24,9 +24,7 @@ public class ProgramProductCosumer {
         System.out.print("Digite a porcentagem de aumento: ");
         double percent = sc.nextDouble();
 
-        Consumer<Product> consumer = p -> p.setPrice(p.getPrice() * (1 + (percent / 100)));
-
-        list.forEach(consumer);
+        list.forEach(p -> p.setPrice(p.getPrice() * (1 + (percent / 100))));
 
         list.forEach(System.out::println);
     }
