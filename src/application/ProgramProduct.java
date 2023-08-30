@@ -25,9 +25,8 @@ public class ProgramProduct {
         System.out.print("Digite o valor mínimo: ");
         int min = sc.nextInt();
 
-        Predicate<Product> prod = p -> p.getPrice() <= min;
-
-        list.removeIf(prod);
+        //Expressão Lambda: traz a declaração para a mesma linha
+        list.removeIf(p -> p.getPrice() <= min);
 
         for (Product p : list) {
             System.out.println(p);
