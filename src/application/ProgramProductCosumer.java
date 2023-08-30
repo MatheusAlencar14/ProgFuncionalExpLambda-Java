@@ -18,14 +18,8 @@ public class ProgramProductCosumer {
         list.add(new Product("Tablet", 450.00));
         list.add(new Product("Teclado", 69.00));
 
-        list.forEach(new ProductConsumer());
-
-        for (Product p : list) {
-            System.out.println(p);
-        }
-        System.out.println();
-
-        //Forma de usar o forEach para imprimir uma lista
+        list.forEach(Product::staticProductConsumer);
+        
         list.forEach(System.out::println);
     }
 }
