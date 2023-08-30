@@ -22,9 +22,7 @@ public class ProgramProductFunction {
         list.add(new Product("Tablet", 450.00));
         list.add(new Product("Teclado", 69.00));
 
-        Function<Product, String> function = p -> p.getName().toUpperCase();
-
-        List<String> names = list.stream().map(function).collect(Collectors.toList());
+        List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 
         names.forEach(System.out::println);
     }
