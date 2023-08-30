@@ -21,7 +21,7 @@ public class ProgramProductFunction {
         list.add(new Product("Tablet", 450.00));
         list.add(new Product("Teclado", 69.00));
 
-        List<String> names = list.stream().map(new ProductFunction()).collect(Collectors.toList());
+        List<String> names = list.stream().map(Product::staticProductFunction).collect(Collectors.toList());
 
         names.forEach(System.out::println);
     }

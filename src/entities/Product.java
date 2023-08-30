@@ -42,6 +42,10 @@ public class Product {
         price *= 1.2;
     }
 
+    public static String staticProductFunction(Product product) {
+        return product.getName().toUpperCase();
+    }
+
     @Override
     public String toString() {
         return "Product: " + name + ", " + String.format("%.2f", price);
