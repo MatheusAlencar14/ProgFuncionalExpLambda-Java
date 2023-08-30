@@ -20,7 +20,7 @@ public class ProgramProduct {
         list.add(new Product("Teclado", 69.00));
 
         //Referência para método: (Nome da Classe::Nome do método)
-        list.removeIf(Product::staticProductPredicate);
+        list.removeIf(Product::nonStaticProductPredicate);
 
         for (Product p : list) {
             System.out.println(p);
