@@ -46,6 +46,10 @@ public class Product {
         return product.getName().toUpperCase();
     }
 
+    public String nonStaticProductFunction() {
+        return name.toUpperCase();
+    }
+
     @Override
     public String toString() {
         return "Product: " + name + ", " + String.format("%.2f", price);
