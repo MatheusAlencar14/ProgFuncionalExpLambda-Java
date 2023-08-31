@@ -23,7 +23,7 @@ public class ProgramProductService {
 
         ProductService ps = new ProductService();
 
-        double sum = ps.filteredSum(list);
+        double sum = ps.filteredSum(list, p -> p.getPrice() <= 500);
 
         System.out.println("Soma: " + String.format("%.2f", sum));
     }
